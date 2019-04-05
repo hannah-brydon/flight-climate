@@ -1,0 +1,11 @@
+#!/bin/bash
+set -e
+PROJECT=$(basename $(pwd))
+docker build -t $PROJECT:latest .
+docker run --rm \
+  -p 127.0.0.1:8787:8787 \
+  -e DISABLE_AUTH=true \
+  -v $(pwd):/home/rstudio/$PROJECT \
+  -v $(pwd)/.rstudio:/home/rstudio/.rstudio \
+  $PROJECT:latest
+

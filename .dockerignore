@@ -1,0 +1,8 @@
+.rlib
+.Rproj.user
+.rstudio
+.rlib
+.git
+packrat/lib*
+packrat/src
+plots

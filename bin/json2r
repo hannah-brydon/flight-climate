@@ -1,0 +1,3 @@
+#!/bin/bash
+# Convert Elasticsearch query to R expression.
+sed -e 's/{/list(/g' -e 's/:/=/g' -e 's/}/)/g'
