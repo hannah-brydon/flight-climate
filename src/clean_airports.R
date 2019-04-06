@@ -23,19 +23,14 @@ col_names <- c(
 
 # Read in data
 d_airports <- read.csv("data/openflights/airports.dat", header = F, col.names = col_names) %>%
-    tbl_df()
-
-# Select Columns we care about
-d_airports %>%
+    tbl_df() %>%
     select(
         airport_id,
         airport_name,
         city,
         country,
-        iata,
-        icao,
         lat,
         lng,
         alt
     ) %>%
-    write_csv(path = "greenet_shiny/data/airports.csv")
+    mutate_all(as.character)

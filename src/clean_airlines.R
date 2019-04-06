@@ -23,10 +23,7 @@ col_names <- c(
 
 # Read in data
 d_airlines <- read.csv("data/openflights/airlines.dat", header = F, col.names = col_names) %>%
-    tbl_df()
-
-
-d_airlines %>%
+    tbl_df() %>%
 
     # Filter for active airlines
     filter(airline_status == "Y") %>%
@@ -37,6 +34,7 @@ d_airlines %>%
         airline_id,
         airline_name,
         airline_country
-    )
+    ) %>%
+    mutate_all(as.character)
 
 

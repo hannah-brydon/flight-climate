@@ -22,4 +22,5 @@ col_names <- c(
 
 # Read in data
 d_planes <- read.csv("data/openflights/planes.dat", header = F, col.names = col_names) %>%
-    tbl_df()
+    tbl_df() %>%
+    mutate_all(as.character)

@@ -15,6 +15,7 @@ col_names <- c(
 
 d_routes <- read.csv("data/openflights/routes.dat", header = F, col.names = col_names) %>%
     tbl_df() %>%
-    filter(stops == 0)
-
+    filter(stops == 0) %>%
+    select(-codeshare, -equipment, -stops) %>%
+    mutate_all(as.character)
 

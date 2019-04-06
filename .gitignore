@@ -8,3 +8,4 @@ packrat/lib*/
 .Rproj.user
 plots
 .credentials/
+greenet_shiny/data/d_final.csv
