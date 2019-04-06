@@ -1,0 +1,2 @@
+jsTagManagerJsonpCallback([31],{55:function(e,a,n){"use strict";Object.defineProperty(a,"__esModule",{value:!0});var t=n(44),p=function(e,a){var n=t.a.getWindow();n._pxAppId="PXrf8vapwA",a("//client.perimeterx.net/"+n._pxAppId+"/main.min.js")};a.default=p}});
+//# sourceMappingURL=perimeterx-perimeterx.ae601f3e.chunk.js.map

@@ -1,0 +1,2 @@
+jsTagManagerJsonpCallback([36],{48:function(n,e,t){"use strict";Object.defineProperty(e,"__esModule",{value:!0});var o=function(n,e){window.uetq=window.uetq||[],e("//bat.bing.com/bat.js",function(){window.uetq=new UET({ti:"5317757",q:window.uetq}),window.uetq.push("pageLoad")},null,"anonymous")};e.default=o}});
+//# sourceMappingURL=bing-bing.ad0fbc5b.chunk.js.map
