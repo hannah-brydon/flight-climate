@@ -37,4 +37,5 @@ d_airports %>%
         lat,
         lng,
         alt
-    )
+    ) %>%
+    write_csv(path = "greenet_shiny/data/airports.csv")
