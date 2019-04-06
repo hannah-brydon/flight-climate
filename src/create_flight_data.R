@@ -60,9 +60,14 @@ d_enriched %>%
 
 date_range <- seq(Sys.Date() - 365*2, Sys.Date(), by = 1)
 
+num_flights_per_day <- rnorm(1)
+
 d_final <- map_df(date_range, function(date){
+
+    # Generate num flights per day
+    num_flights <- rnorm(1, mean = 3500, sd = 400)
     # Generate data
-    sample_n(d_enriched, size = 3500, replace = T) %>%
+    sample_n(d_enriched, size = num_flights, replace = T) %>%
         mutate(date = date)
 }) %>%
     write_csv("greenet_shiny/data/d_final.csv")
