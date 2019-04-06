@@ -87,6 +87,7 @@ def verbs(api, query, outfile):
     with open(outfile, 'w') as f:
         for item in tweepy.Cursor(api.search, query).items():
             dd = proc(item._json)
+            dd['query'] = query
             f.write(json.dumps(dd) + "\n")
             lc()
     lc(True)
@@ -99,13 +100,24 @@ def map_queries(api, queries):
 
 
 QUERIES = [
-    'sustainable flight',
-    'sustainable airlines',
-    'aircraft emissions',
-    'air new zealand',
-    'quantas',
+    # 'sustainable flight',
+    # 'sustainable airlines',
+    # 'aircraft emissions',
+    # 'airline emissions',
+    # 'airplane emissions',
+    # 'aeroplane emissions',
+    # 'air new zealand',
+    # 'quantas',
     'jetstar',
     'singapore airlines',
+    'virgin airlines',
+    'boeing',
+    'airbus',
+    'air emirates',
+    'emirates emissions',
+    'air new zealand emissions',
+    'quantas emissions',
+    'jetstar emissions'
 ]
 
 
