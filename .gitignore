@@ -9,3 +9,4 @@ packrat/lib*/
 plots
 .credentials/
 greenet_shiny/data/d_final.csv
+*.jsonld
